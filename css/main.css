@@ -5,6 +5,22 @@
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --border-radius: 0.35rem;
 }
+
+body {
+    --color--bg: #eeeeee;
+    --color--bg--secondary: #e6d9d9;
+    --color--text: #000000;
+    color: var(--color--text);
+    background-color: var(--color--bg);
+}
+
+body.dark-mode {
+    --color--bg: #212E37;
+    --color--bg--secondary: #2B3743;
+    --color--text: #ffffff;
+}
+
+
 .content {
     margin-left: auto;
     margin-right: auto;
