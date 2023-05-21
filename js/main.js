@@ -1,17 +1,12 @@
 import { options } from "./options.js";
 
-const buscar = document.querySelector('.inputFormulario').value;
-
-/*
-const url =  `https://watchmode.p.rapidapi.com/autocomplete-search/?search_value=${buscar}&search_type=1`;
-const url2 = `https://watchmode.p.rapidapi.com/autocomplete-search/?search_value=${buscar}&search_type=1`;
-*/
-
 document.querySelector(".buscar").addEventListener("click", (e) => {
     e.preventDefault();
+    const buscar = document.getElementById('inputFormulario').value;
+    const url2 = `https://watchmode.p.rapidapi.com/autocomplete-search/?search_value=${buscar}&search_type=1`;
 
-    console.log(buscar.value);
-    /*
+    console.log(buscar);
+    
     const fetchData = async () =>{
         try {
             const response = await fetch(url2, options);
@@ -22,7 +17,7 @@ document.querySelector(".buscar").addEventListener("click", (e) => {
         }
     }
     fetchData()
-    */
+    
 });
 
 
