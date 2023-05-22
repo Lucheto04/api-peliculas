@@ -71,3 +71,15 @@ body.dark-mode {
     cursor: pointer;
     padding: 1rem;
 }
+
+.card-content {
+    display: flex;
+    margin: 2rem 0px;
+}
+.card-img {
+    width: 200px;
+}
+
+.card-text {
+    margin-left: 20px;
+}

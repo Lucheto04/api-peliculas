@@ -36,15 +36,23 @@ function obtenerID(resultadosBusqueda) {
                 const calificacion = data.user_rating
 
                 carta += /*HTML*/`
-                <div class="text-content">
-                    <img src="https://cdn.watchmode.com/posters/03173903_poster_w185.jpg" alt="">
-                    <h3 class="nombre">Nombre</h3>
-                    <p class="type">Tipo</p>
-                    <p class>tiempo de duracion o cantidad de capitulos</p>
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="${poster}" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Titulo: <span class="titulo">${titulo}</span></h3>
+                        <p>Tipo: <span class="type">${tipo}</span></p>
+                        <p>Estreno en el: <span class="estreno">${estreno}</span></p>
+                        <p>Generos: <span class="generos">${generos}</span></p>
+                        <p>Calificación: <span class="calificacion">${calificacion}</span></p>
+                    </div>
                 </div>
                 `
             } catch (error) {            
             }
+            console.log(carta);
+            document.querySelector('#contenido').innerHTML = carta;
         };
         fetchData();
     } 
