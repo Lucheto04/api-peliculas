@@ -18,6 +18,7 @@ document.querySelector(".buscar").addEventListener("click", (e) => {
     fetchData()
 });
 function obtenerID(resultadosBusqueda) {
+    let carta = "";
     for (let i = 0; i < resultadosBusqueda.length; i++) {
         const ID = resultadosBusqueda[i].id;
     const url_info_detallada = `https://watchmode.p.rapidapi.com/title/${ID}/details/?language=ES`;
@@ -27,9 +28,21 @@ function obtenerID(resultadosBusqueda) {
                 const response = await fetch(url_info_detallada, options)
                 const data = await response.json();
                 // console.log(data); // obtenemos la info detallada de todos los resultados
+                const poster = data.poster
+                const titulo = data.title
+                const tipo = data.type
+                const estreno = data.release_date
+                const generos = data.genre_names
+                const calificacion = data.user_rating
 
-
-
+                carta += /*HTML*/`
+                <div class="text-content">
+                    <img src="https://cdn.watchmode.com/posters/03173903_poster_w185.jpg" alt="">
+                    <h3 class="nombre">Nombre</h3>
+                    <p class="type">Tipo</p>
+                    <p class>tiempo de duracion o cantidad de capitulos</p>
+                </div>
+                `
             } catch (error) {            
             }
         };
