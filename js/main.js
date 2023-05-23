@@ -34,7 +34,8 @@ function obtenerID(resultadosBusqueda) {
                 const estreno = data.release_date
                 const generos = data.genre_names
                 const calificacion = data.user_rating
-
+                const trailer = data.trailer
+                console.log(trailer);
                 carta += /*HTML*/`
                 <div class="card-content">
                     <div class="card-img">
@@ -46,12 +47,14 @@ function obtenerID(resultadosBusqueda) {
                         <p>Estreno en el: <span class="estreno">${estreno}</span></p>
                         <p>Generos: <span class="generos">${generos}</span></p>
                         <p>Calificación: <span class="calificacion">${calificacion}</span></p>
+                        <a href="${trailer}">Trailer</a>
+
                     </div>
                 </div>
                 `
             } catch (error) {            
             }
-            console.log(carta);
+            // console.log(carta);
             document.querySelector('#contenido').innerHTML = carta;
         };
         fetchData();
