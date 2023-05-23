@@ -40,6 +40,9 @@ body.dark-mode {
 }
 
 .form-search {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     background-color: var(--color--bg--secondary);
