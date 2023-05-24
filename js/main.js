@@ -47,7 +47,7 @@ function obtenerID(resultadosBusqueda) {
                         <p>Estreno en el: <span class="estreno">${estreno}</span></p>
                         <p>Generos: <span class="generos">${generos}</span></p>
                         <p>Calificación: <span class="calificacion">${calificacion}</span></p>
-                        <a href="${trailer}">Trailer</a>
+                        <a href="${trailer}" target="_blank">Trailer</a>
 
                     </div>
                 </div>
